@@ -1,0 +1,16 @@
+package {{ package }};
+
+ /**
+ * @Description
+ * @author admin
+ * @version V1.0
+ * @since V1.0
+ * @date {{ date }}
+ *
+ */
+public class {{ class_name }}DaoProvider {
+    public String get{{ table_name }}List() {
+        String strSql = "{{ sql_str | safe}}";
+        return strSql;
+    }
+}

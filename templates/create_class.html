@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/createClass" method="post" datatype="application/json">
+        <div style="width: 100%; min-height: 200px; border: 0px silver solid;float: left;">
+            <div style="width: 49.5%; height: 170px; float:right;">
+                <h3>添加业务类</h3>
+                <hr/>
+                <input type="checkbox" name="provider" id="provider" onclick="return false;" checked/> Provider<br/>
+                <input type="checkbox" name="model" id="model" onclick="return false;" checked/> Model<br/>
+                <input type="checkbox" name="dao" id="dao" onclick="return false;" checked/> Dao<br/>
+                <input type="checkbox" name="sndclass" id="sndclass" onclick="return false;" checked/> SndClass<br/>
+                <br>
+            </div>
+        </div>
+        <hr>
+        <p>
+            <input type="submit" id="commit" name="commit" value=" 提  交 " style="margin-left: 47%">
+        </p>
+    </form>
+    {% if msg %}
+        <strong>msg:</strong> {{ msg }}
+    {% endif %}
+    {% if file_name %}
+        <strong>下载文件:</strong> <a href="/result/{{ file_name }}" >{{ file_name }}</a>
+    {% endif %}
+
+</body>
+</html>

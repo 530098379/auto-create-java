@@ -1,0 +1,20 @@
+{{ content_html|safe }}
+package {{ package }};
+
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * @author admin
+ * @version 1.0
+ * @Description
+ * @date {{ date }}
+ */
+public class {{ class_name }}Model extends SndBaseModel {
+
+{{ propertys }}
+    @Override
+    public String toString() {
+        {{ methods | safe}}
+    }
+}

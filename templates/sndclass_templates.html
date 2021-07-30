@@ -1,0 +1,19 @@
+package {{ package }};
+
+import com.lpmssnd.SndAllBaseClass;
+import org.springframework.stereotype.Component;
+
+/**
+ * @author admin
+ * @version V1.0
+ * @Description {{ description }}
+ * @date {{ date }}
+ * @since V1.0
+ */
+
+@Component("{{ class_name }}Class")
+public class {{ class_name }}Class extends SndAllBaseClass.SndDealerBaseClass {
+    public {{ class_name }}Class() {
+        queryId="com.dao.{{ class_name }}Dao.get{{ table_name }}List";
+    }
+}

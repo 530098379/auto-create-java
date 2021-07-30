@@ -1,0 +1,23 @@
+package {{ package }};
+
+import com.dao.provider.{{ class_name }}DaoProvider;
+import com.model.{{ class_name }}Model;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.SelectProvider;
+
+ /**
+ * @Description
+ * @author admin
+ * @version V1.0
+ * @since V1.0
+ * @date {{ date }}
+ *
+ */
+@Mapper
+public interface {{ class_name }}Dao {
+    {{ results_str | safe}}
+    @SelectProvider(type = {{ class_name }}DaoProvider.class, method = "get{{ table_name }}List")
+    List<{{ class_name }}Model> get{{ table_name }}List();
+}
